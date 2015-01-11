@@ -9,7 +9,7 @@
 	// if the caller is known, then greet them by name
 	// otherwise, consider them just another monkey
 	if(!$name = $people[$_REQUEST['From']])
-		$name = "Monkey";
+		$name = $_REQUEST['From'];
 		
 	// now greet the caller
 	header("content-type: text/xml");
