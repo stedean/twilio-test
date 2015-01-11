@@ -13,8 +13,8 @@
 ?>
 <Response>
 <?php if ($_REQUEST['Digits'] == '1') { ?>
-	<Dial>+13105551212</Dial>
-	<Say>The call failed or the remote party hung up.  Goodbye.</Say>
+	<Dial>+447788310101</Dial>
+	<Say>Stephen hung up has he is insulted you think he is a monkey.  Goodbye.</Say>
 <?php } elseif ($_REQUEST['Digits'] == '2') { ?>
 	<Say>Record your monkey howl after the tone.</Say>
 	<Record maxLength="30" action="hello-monkey-handle-recording.php" />
