@@ -3,7 +3,7 @@
 	// make an associative array of callers we know, indexed by phone number
 	$people = array(
 		"+447825775727"=>"Amy",
-		"447788310101"=>"Stephen"
+		"+447788310101"=>"Stephen"
 	);
 	
 	// if the caller is known, then greet them by name
