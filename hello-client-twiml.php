@@ -22,7 +22,7 @@ if (preg_match("/^[\d\+\-\(\) ]+$/", $number)) {
 ?>
  
 <Response>
-    <Dial callerId="<?php echo $callerId ?>">
-          <?php echo $numberOrClient ?>
+    <Dial>
+          <Number>+447788310101</Number>
     </Dial>
 </Response>
