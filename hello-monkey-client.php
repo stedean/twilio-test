@@ -4,9 +4,13 @@ include 'twilio-php-master/Services/Twilio/Capability.php';
 // put your Twilio API credentials here
 $accountSid = 'ACfa638e607f8eb06cc2aa87e67c96a364';
 $authToken  = 'a0e5d44bc1c7875f1aedabbc5be4c88c';
+
+// put your Twilio Application Sid here
+$appSid     = 'AP25a7956ae01e54abc5472fab132c684e';
  
 $capability = new Services_Twilio_Capability($accountSid, $authToken);
-$capability->allowClientOutgoing('APabe7650f654fc34655fc81ae71caa3ff');
+$capability->allowClientOutgoing($appSid);
+$capability->allowClientIncoming('Stephen');
 $token = $capability->generateToken();
 ?>
  
@@ -39,6 +43,12 @@ $token = $capability->generateToken();
       
       Twilio.Device.disconnect(function (conn) {
         $("#log").text("Call ended");
+      });
+      
+      Twilio.Device.incoming(function (conn) {
+        $("#log").text("Incoming connection from " + conn.parameters.From);
+        // accept the incoming connection and start two-way audio
+        conn.accept();
       });
  
       function call() {
