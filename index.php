@@ -21,7 +21,7 @@
         // Initiate a new outbound call
         $call = $client->account->calls->create(
             $phonenumber, // The number of the phone initiating the call
-            '+447788310101', // The number of the phone receiving call
+            $receiving, // The number of the phone receiving call
             'https://ancient-mesa-3939.herokuapp.com/hello-monkey.php' // The URL Twilio will request when the call is answered
         );
         echo 'Started call: ' . $call->sid;
