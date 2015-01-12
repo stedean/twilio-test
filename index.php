@@ -11,11 +11,13 @@
      
     // A phone number you have previously validated with Twilio
     $phonenumber = '+441708394056';
-     
+    $receiving = '+447788310101';
+    echo 'Creating a new Twilio client'
     // Instantiate a new Twilio Rest Client
     $client = new Services_Twilio($sid, $token, $version);
  
     try {
+        echo 'Calling ' . $receiving . ' from ' . $phonenumber;
         // Initiate a new outbound call
         $call = $client->account->calls->create(
             $phonenumber, // The number of the phone initiating the call
