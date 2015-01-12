@@ -54,7 +54,7 @@ $token = $capability->generateToken();
       function call() {
         // get the phone number to connect the call to
         params = {"PhoneNumber": $("#number").val()};
-        $("#log").text("Calling " . $("#number").val());
+        $("#log").text($("#number").val());
         Twilio.Device.connect(params);
       }
       
