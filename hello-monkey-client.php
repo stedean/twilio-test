@@ -52,7 +52,9 @@ $token = $capability->generateToken();
       });
  
       function call() {
-        Twilio.Device.connect();
+        // get the phone number to connect the call to
+        params = {"PhoneNumber": $("#number").val()};
+        Twilio.Device.connect(params);
       }
       
       function hangup() {
@@ -68,6 +70,9 @@ $token = $capability->generateToken();
     <button class="hangup" onclick="hangup();">
       Hangup
     </button>
+    
+    <input type="text" id="number" name="number"
+      placeholder="Enter a phone number to call"/>
  
     <div id="log">Loading pigeons...</div>
   </body>
