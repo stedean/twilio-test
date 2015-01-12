@@ -36,15 +36,27 @@ $token = $capability->generateToken();
       Twilio.Device.connect(function (conn) {
         $("#log").text("Successfully established call");
       });
+      
+      Twilio.Device.disconnect(function (conn) {
+        $("#log").text("Call ended");
+      });
  
       function call() {
         Twilio.Device.connect();
+      }
+      
+      function hangup() {
+        Twilio.Device.disconnectAll();
       }
     </script>
   </head>
   <body>
     <button class="call" onclick="call();">
       Call
+    </button>
+    
+    <button class="hangup" onclick="hangup();">
+      Hangup
     </button>
  
     <div id="log">Loading pigeons...</div>
