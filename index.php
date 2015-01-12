@@ -12,7 +12,7 @@
     // A phone number you have previously validated with Twilio
     $phonenumber = '+441708394056';
     $receiving = '+447788310101';
-    echo 'Creating a new Twilio client'
+    echo 'Creating a new Twilio client';
     // Instantiate a new Twilio Rest Client
     $client = new Services_Twilio($sid, $token, $version);
  
