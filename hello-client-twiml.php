@@ -2,7 +2,7 @@
 header('Content-type: text/xml');
  
 // put a phone number you've verified with Twilio to use as a caller ID number
-$callerId = "+447788310101";
+$callerId = "+441708394056";
  
 // put your default Twilio Client name here, for when a phone number isn't given
 $number   = "Stephen";
@@ -22,7 +22,7 @@ if (preg_match("/^[\d\+\-\(\) ]+$/", $number)) {
 ?>
  
 <Response>
-    <Dial callerId="+447788310101">
+    <Dial callerId="<?php echo $callerId ?>">
           <Number>+447788310101</Number>
     </Dial>
 </Response>
