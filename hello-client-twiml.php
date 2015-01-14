@@ -23,6 +23,6 @@ if (preg_match("/^[\d\+\-\(\) ]+$/", $number)) {
  
 <Response>
     <Dial callerId="<?php echo $callerId ?>">
-          <Number>+447788310101</Number>
+          <?php echo $numberOrClient ?>
     </Dial>
 </Response>
