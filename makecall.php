@@ -15,5 +15,6 @@ if (!isset($_REQUEST['called'])) {
 echo("<br>creating call: " . $_REQUEST['called']);
 $call = $client->account->calls->create($fromNumber,$toNumber,'callback.php?number=' . $_REQUEST['called']);
 $msg = urlencode("Connecting... ".$call->sid);
+echo("<br>msg: " . $msg)
 header("Location: click-to-call.php?msg=$msg");
 ?>
