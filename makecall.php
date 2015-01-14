@@ -12,7 +12,7 @@ if (!isset($_REQUEST['called'])) {
  header("Location: click-to-call.php?msg=$err");
  die;
 }
-echo("<br>creating call");
+echo("<br>creating call: " . $_REQUEST['called']);
 $call = $client->account->calls->create($fromNumber,$toNumber,'callback.php?number=' . $_REQUEST['called']);
 $msg = urlencode("Connecting... ".$call->sid);
 header("Location: click-to-call.php?msg=$msg");
