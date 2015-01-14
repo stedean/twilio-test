@@ -22,6 +22,7 @@ if (preg_match("/^[\d\+\-\(\) ]+$/", $number)) {
 ?>
  
 <Response>
+    <Say voice="woman">Are we going to watch Silent Witness</Say>
     <Dial callerId="<?php echo $callerId ?>">
           <?php echo $numberOrClient ?>
     </Dial>
