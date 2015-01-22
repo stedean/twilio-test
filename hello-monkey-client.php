@@ -6,11 +6,12 @@ $accountSid = 'ACfa638e607f8eb06cc2aa87e67c96a364';
 $authToken  = 'a0e5d44bc1c7875f1aedabbc5be4c88c';
 
 // put your Twilio Application Sid here
-$appSid     = 'AP25a7956ae01e54abc5472fab132c684e';
- 
+//$appSid     = 'AP25a7956ae01e54abc5472fab132c684e';
+$appSid     = 'AP1ed53150a4fb7e430c22a450ad93bb8f';
+
 $capability = new Services_Twilio_Capability($accountSid, $authToken);
 $capability->allowClientOutgoing($appSid);
-$capability->allowClientIncoming('Stephen');
+$capability->allowClientIncoming('OpenVBX');
 $token = $capability->generateToken();
 ?>
  
