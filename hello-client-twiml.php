@@ -6,7 +6,7 @@ $callerId = "+447788310101";
  
 // put your default Twilio Client name here, for when a phone number isn't given
 $number   = "OpenVBX";
-$client   = "OpenVBX";
+$client   = "OpenVBX-Inbound";
  
 // get the phone number from the page request parameters, if given
 if (isset($_REQUEST['PhoneNumber'])) {
