@@ -6,6 +6,7 @@ $callerId = "+447788310101";
  
 // put your default Twilio Client name here, for when a phone number isn't given
 $number   = "OpenVBX";
+$client   = "OpenVBX";
  
 // get the phone number from the page request parameters, if given
 if (isset($_REQUEST['PhoneNumber'])) {
@@ -23,6 +24,6 @@ if (preg_match("/^[\d\+\-\(\) ]+$/", $number)) {
  
 <Response>
     <Dial callerId="<?php echo $callerId ?>">
-          <Client>OpenVBX</Client>
+          <Client><?php echo $client ?></Client>
     </Dial>
 </Response>
