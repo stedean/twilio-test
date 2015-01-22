@@ -23,6 +23,6 @@ if (preg_match("/^[\d\+\-\(\) ]+$/", $number)) {
  
 <Response>
     <Dial callerId="<?php echo $callerId ?>">
-          <?php echo $numberOrClient ?>
+          <Client>OpenVBX</Client>
     </Dial>
 </Response>
