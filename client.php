@@ -54,7 +54,7 @@ $token = $capability->generateToken();
       
       Twilio.Device.disconnect(function (conn) {
         $("#log").text("Call ended:");
-      );
+      });
       
       Twilio.Device.incoming(function (conn) {
         $("#log").text("Incoming connection from " + conn.parameters.From);
