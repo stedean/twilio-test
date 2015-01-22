@@ -4,10 +4,19 @@ include 'twilio-php-master/Services/Twilio/Capability.php';
 // put your Twilio API credentials here
 $accountSid = 'ACfa638e607f8eb06cc2aa87e67c96a364';
 $authToken  = 'a0e5d44bc1c7875f1aedabbc5be4c88c';
- 
+$appSid = 'AP6118fa7162278251646f075f55cb78fc';
+
+// put your default Twilio Client name here
+$clientName = 'HGSClient';
+
+// get the Twilio Client name from the page request parameters, if given
+if (isset($_REQUEST['client'])) {
+    $clientName = $_REQUEST['client'];
+}
+
 $capability = new Services_Twilio_Capability($accountSid, $authToken);
-$capability->allowClientOutgoing('AP6118fa7162278251646f075f55cb78fc');
-$capability->allowClientIncoming('HGSClient');
+$capability->allowClientOutgoing($appSid);
+$capability->allowClientIncoming($clientName);
 $token = $capability->generateToken();
 ?>
  
@@ -27,7 +36,7 @@ $token = $capability->generateToken();
       Twilio.Device.setup("<?php echo $token; ?>");
  
       Twilio.Device.ready(function (device) {
-        $("#log").text("Ready");
+        $("#log").text("Client '<?php echo $clientName ?>' is ready");
       });
  
       Twilio.Device.error(function (error) {
@@ -49,7 +58,9 @@ $token = $capability->generateToken();
       });
  
       function call() {
-        Twilio.Device.connect();
+        // get the phone number or client to connect the call to
+        params = {"PhoneNumber": $("#number").val()};
+        Twilio.Device.connect(params);
       }
     </script>
   </head>
@@ -61,6 +72,9 @@ $token = $capability->generateToken();
     <button class="hangup" onclick="hangup();">
       Hangup
     </button>
+   
+   <input type="text" id="number" name="number"
+      placeholder="Enter a phone number or client to call"/>
  
     <div id="log">Loading pigeons...</div>
   </body>
