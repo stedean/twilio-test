@@ -72,7 +72,7 @@ $token = $capability->generateToken();
         }
         else {
           // find the item by client name and remove it
-          $("#" + pres.from).remove();
+          $(pres.from).remove();
         }
       });
  
