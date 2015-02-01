@@ -61,20 +61,6 @@ $token = $capability->generateToken();
         // accept the incoming connection and start two-way audio
         conn.accept();
       });
-      
-      Twilio.Device.presence(function (pres) {
-        if (pres.available) {
-          // create an item for the client that became available
-          $("<li>", {id: pres.from, text: pres.from}).click(function () {
-            $("#number").val(pres.from);
-            call();
-          }).prependTo("#people");
-        }
-        else {
-          // find the item by client name and remove it
-          $(pres.from).remove();
-        }
-      });
  
       function call() {
         // get the phone number or client to connect the call to
@@ -100,7 +86,5 @@ $token = $capability->generateToken();
       placeholder="Enter a phone number or client to call"/>
  
     <div id="log">Loading pigeons...</div>
-    
-    <ul id="people"/>
   </body>
 </html>
