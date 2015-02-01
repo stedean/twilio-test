@@ -100,7 +100,7 @@ $token = $capability->generateToken();
       placeholder="Enter a phone number or client to call"/>
  
     <div id="log">Loading pigeons...</div>
-    <div id="dialpad" style="display:none;">
+    <div id="dialpad">
 				<table>
 				<tr>
 				<td><input type="button" value="1" id="button1"></td>
