@@ -71,6 +71,20 @@ $token = $capability->generateToken();
       function hangup() {
         Twilio.Device.disconnectAll();
       }
+      
+      $.each(['0','1','2','3','4','5','6','7','8','9','star','pound'], function(index, value) { 
+		    	$('#button' + value).click(function(){ 
+					if(connection) {
+						if (value=='star')
+							connection.sendDigits('*')
+						else if (value=='pound')
+							connection.sendDigits('#')
+						else
+							connection.sendDigits(value)
+						return false;
+					} 
+					});
+			});
     </script>
   </head>
   <body>
@@ -86,5 +100,29 @@ $token = $capability->generateToken();
       placeholder="Enter a phone number or client to call"/>
  
     <div id="log">Loading pigeons...</div>
+    <div id="dialpad" style="display:none;">
+				<table>
+				<tr>
+				<td><input type="button" value="1" id="button1"></td>
+				<td><input type="button" value="2" id="button2"></td>
+				<td><input type="button" value="3" id="button3"></td>
+				</tr>
+				<tr>
+				<td><input type="button" value="4" id="button4"></td>
+				<td><input type="button" value="5" id="button5"></td>
+				<td><input type="button" value="6" id="button6"></td>
+				</tr>
+				<tr>
+				<td><input type="button" value="7" id="button7"></td>
+				<td><input type="button" value="8" id="button8"></td>
+				<td><input type="button" value="9" id="button9"></td>
+				</tr>
+				<tr>
+				<td><input type="button" value="*" id="buttonstar"></td>
+				<td><input type="button" value="0" id="button0"></td>
+				<td><input type="button" value="#" id="buttonpound"></td>
+				</tr>
+				</table>
+			</div>
   </body>
 </html>
