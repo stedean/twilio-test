@@ -85,6 +85,8 @@ $token = $capability->generateToken();
 					} 
 					});
 			});
+			
+			
     </script>
   </head>
   <body>
@@ -99,11 +101,12 @@ $token = $capability->generateToken();
    <input type="text" id="number" name="number"
       placeholder="Enter a phone number or client to call"/>
  
-    <div id="log">Loading pigeons...</div>
-    <div>
+    <div id="log">Loading...</div>
+
+    <div style="position: absolute; left: 50%;">
 				<table>
 				<tr>
-				<td><input id="dialpad"type="button" value="1" id="button1"></td>
+				<td><input id="dialpad" type="button" value="1" id="button1"></td>
 				<td><input  id="dialpad" type="button" value="2" id="button2"></td>
 				<td><input id="dialpad" type="button" value="3" id="button3"></td>
 				</tr>
