@@ -72,6 +72,10 @@ $token = $capability->generateToken();
         Twilio.Device.disconnectAll();
       }
       
+      function keyPress(value) {
+        $("#log").text("Pressed: " + value);
+      }
+      
       $.each(['0','1','2','3','4','5','6','7','8','9','star','pound'], function(index, value) { 
 		    	$('#button' + value).click(function(){ 
 					if(connection) {
@@ -108,7 +112,7 @@ $token = $capability->generateToken();
  
     <div id="log">Loading...</div>
 
-<input type="button" value="1" id="button1">
+    <button onclick="keyPress('1');">1</button>
 
     <div id="dialpad">
 				<table>
