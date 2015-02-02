@@ -73,6 +73,7 @@ $token = $capability->generateToken();
       }
       
       function keyPress(value) {
+        $("#log").text("Key Pressed: " + value);
         if(connection) {
 						if (value=='star')
 							connection.sendDigits('*')
