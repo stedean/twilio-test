@@ -79,8 +79,10 @@ $token = $capability->generateToken();
 							connection.sendDigits('*')
 						else if (value=='pound')
 							connection.sendDigits('#')
-						else
+						else {
+							$("#log").text("Conn Pressed: " + value);
 							connection.sendDigits(value)
+						}
 						return false;
 					} else {
 					  $("#log").text("Pressed: " + value);
