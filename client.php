@@ -73,12 +73,7 @@ $token = $capability->generateToken();
       }
       
       function keyPress(value) {
-        $("#log").text("Pressed: " + value);
-      }
-      
-      $.each(['0','1','2','3','4','5','6','7','8','9','star','pound'], function(index, value) { 
-		    	$('#button' + value).click(function(){ 
-					if(connection) {
+        if(connection) {
 						if (value=='star')
 							connection.sendDigits('*')
 						else if (value=='pound')
@@ -91,11 +86,7 @@ $token = $capability->generateToken();
 					} else {
 					  $("#log").text("Pressed: " + value);
 					}
-					
-					});
-			});
-			
-			
+      }
     </script>
   </head>
   <body>
@@ -112,31 +103,30 @@ $token = $capability->generateToken();
  
     <div id="log">Loading...</div>
 
-    <button onclick="keyPress('1');">1</button>
-
+    
     <div id="dialpad">
-				<table>
-				<tr>
-				<td><input type="button" value="1" id="button1"></td>
-				<td><input type="button" value="2" id="button2"></td>
-				<td><input type="button" value="3" id="button3"></td>
-				</tr>
-				<tr>
-				<td><input type="button" value="4" id="button4"></td>
-				<td><input type="button" value="5" id="button5"></td>
-				<td><input type="button" value="6" id="button6"></td>
-				</tr>
-				<tr>
-				<td><input type="button" value="7" id="button7"></td>
-				<td><input type="button" value="8" id="button8"></td>
-				<td><input type="button" value="9" id="button9"></td>
-				</tr>
-				<tr>
-				<td><input type="button" value="*" id="buttonstar"></td>
-				<td><input type="button" value="0" id="button0"></td>
-				<td><input type="button" value="#" id="buttonpound"></td>
-				</tr>
-				</table>
-			</div>
+      <button onclick="keyPress('1');">1</button>
+      <button onclick="keyPress('2');">2</button>
+      <button onclick="keyPress('3');">3</button>
+    </div>
+    <div id="dialpad">
+      <button onclick="keyPress('4');">4</button>
+      <button onclick="keyPress('5');">5</button>
+      <button onclick="keyPress('6');">6</button>
+    </div>
+    <div id="dialpad">
+      <button onclick="keyPress('7');">7</button>
+      <button onclick="keyPress('8');">8</button>
+      <button onclick="keyPress('9');">9</button>
+    </div>
+    <div id="dialpad">
+      <button onclick="keyPress('*');">*</button>
+      <button onclick="keyPress('0');">0</button>
+      <button onclick="keyPress('#');">#</button>
+    </div>
+
+    
+				
+			
   </body>
 </html>
