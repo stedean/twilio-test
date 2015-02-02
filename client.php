@@ -83,6 +83,7 @@ $token = $capability->generateToken();
 							$("#log").text("Conn Pressed: " + value);
 							connection.sendDigits(value)
 						}
+						$("#log").text("Exiting: " + value);
 						return false;
 					} else {
 					  $("#log").text("Pressed: " + value);
