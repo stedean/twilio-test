@@ -108,6 +108,8 @@ $token = $capability->generateToken();
  
     <div id="log">Loading...</div>
 
+<input type="button" value="1" id="button1">
+
     <div id="dialpad">
 				<table>
 				<tr>
