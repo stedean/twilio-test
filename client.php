@@ -74,6 +74,7 @@ $token = $capability->generateToken();
       
       function keyPress(value) {
         $("#log").text("Key Pressed: " + value);
+        var connection = Twilio.Device.activeConnection();
         if(connection) {
 						if (value=='star')
 							connection.sendDigits('*')
@@ -83,7 +84,6 @@ $token = $capability->generateToken();
 							$("#log").text("Conn Pressed: " + value);
 							connection.sendDigits(value)
 						}
-						$("#log").text("Exiting: " + value);
 						return false;
 					} else {
 					  $("#log").text("Pressed: " + value);
