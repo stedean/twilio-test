@@ -66,6 +66,33 @@ body {
   *display: inline;
 }
 
+#btn {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -ms-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#btn:hover {
+  background: #919496;
+  background-image: -webkit-linear-gradient(top, #919496, #919496);
+  background-image: -moz-linear-gradient(top, #919496, #919496);
+  background-image: -ms-linear-gradient(top, #919496, #919496);
+  background-image: -o-linear-gradient(top, #919496, #919496);
+  background-image: linear-gradient(to bottom, #919496, #919496);
+  text-decoration: none;
+}
+
 #people {
     position:fixed;
     bottom:0px;

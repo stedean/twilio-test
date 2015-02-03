@@ -107,7 +107,7 @@ $token = $capability->generateToken();
 
     
     <div id="dialpad">
-      <button class="btn" onclick="keyPress('1');">1</button>
+      <button id="btn" onclick="keyPress('1');">1</button>
       <button onclick="keyPress('2');">2</button>
       <button onclick="keyPress('3');">3</button>
     </div>
