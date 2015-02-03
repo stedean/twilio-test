@@ -106,29 +106,25 @@ $token = $capability->generateToken();
     <div id="log">Loading...</div>
 
     
-    <div id="dialpad">
+    <div>
       <button id="btn" onclick="keyPress('1');">1</button>
-      <button onclick="keyPress('2');">2</button>
-      <button onclick="keyPress('3');">3</button>
+      <button id="btn" onclick="keyPress('2');">2</button>
+      <button id="btn" onclick="keyPress('3');">3</button>
     </div>
-    <div id="dialpad">
-      <button onclick="keyPress('4');">4</button>
-      <button onclick="keyPress('5');">5</button>
-      <button onclick="keyPress('6');">6</button>
+    <div>
+      <button id="btn" onclick="keyPress('4');">4</button>
+      <button id="btn" onclick="keyPress('5');">5</button>
+      <button id="btn" onclick="keyPress('6');">6</button>
     </div>
-    <div id="dialpad">
-      <button onclick="keyPress('7');">7</button>
-      <button onclick="keyPress('8');">8</button>
-      <button onclick="keyPress('9');">9</button>
+    <div>
+      <button id="btn" onclick="keyPress('7');">7</button>
+      <button id="btn" onclick="keyPress('8');">8</button>
+      <button id="btn" onclick="keyPress('9');">9</button>
     </div>
-    <div id="dialpad">
-      <button onclick="keyPress('*');">*</button>
-      <button onclick="keyPress('0');">0</button>
-      <button onclick="keyPress('#');">#</button>
+    <div>
+      <button id="btn" onclick="keyPress('*');">*</button>
+      <button id="btn" onclick="keyPress('0');">0</button>
+      <button id="btn" onclick="keyPress('#');">#</button>
     </div>
-
-    
-				
-			
   </body>
 </html>
